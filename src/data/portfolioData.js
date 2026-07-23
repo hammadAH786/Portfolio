@@ -92,7 +92,7 @@ export const projects = [
       "A clean, trust-driven marketing site for a real estate agency — hero, property listings, services, and contact/inquiry flow.",
     tags: ["React.js", "Tailwind",],
     image: "ss5.png",
-    liveLink: "https://tumhara-real-estate-vercel-url.vercel.app",
+    liveUrl: "https://real-state-agency-inky.vercel.app/",
    
   },
   {
