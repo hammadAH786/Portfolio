@@ -17,8 +17,12 @@ export default function Projects() {
           {projects.map((project, i) => (
             <article
               key={project.title}
-              className={`project-card glass reveal ${isVisible ? "is-visible" : ""}`}
-              style={{ transitionDelay: isVisible ? `${i * 90}ms` : "0ms" }}
+              className={`project-card glass reveal ${
+                isVisible ? "is-visible" : ""
+              }`}
+              style={{
+                transitionDelay: isVisible ? `${i * 90}ms` : "0ms",
+              }}
             >
               <div className="project-thumb">
                 {project.image ? (
@@ -32,7 +36,9 @@ export default function Projects() {
 
               <div className="project-body">
                 <h3>{project.title}</h3>
+
                 <p>{project.description}</p>
+
                 <div className="project-tags">
                   {project.tags.map((tag) => (
                     <span key={tag} className="tag">
@@ -40,13 +46,29 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
+
                 <div className="project-links">
-                  <a href={project.liveUrl} className="project-link">
-                    Live demo ↗
-                  </a>
-                  <a href={project.codeUrl} className="project-link">
-                    Source code ↗
-                  </a>
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link"
+                    >
+                      Live demo ↗
+                    </a>
+                  )}
+
+                  {project.codeUrl && (
+                    <a
+                      href={project.codeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link"
+                    >
+                      Source code ↗
+                    </a>
+                  )}
                 </div>
               </div>
             </article>
