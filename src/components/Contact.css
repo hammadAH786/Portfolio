@@ -1,0 +1,63 @@
+.contact-panel {
+  padding: 72px 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-heading {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-subheading {
+  color: var(--text-secondary);
+  max-width: 520px;
+  margin-bottom: 40px;
+}
+
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+}
+
+.contact-socials {
+  display: flex;
+  gap: 28px;
+}
+
+.contact-socials a {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  position: relative;
+}
+
+.contact-socials a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.contact-socials a:hover {
+  color: var(--text-primary);
+}
+
+.contact-socials a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .contact-panel {
+    padding: 52px 26px;
+  }
+}

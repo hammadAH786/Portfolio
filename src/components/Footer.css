@@ -1,0 +1,25 @@
+.footer {
+  padding: 40px 0 60px;
+  border-top: 1px solid var(--glass-border);
+  margin-top: 40px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.footer-back {
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.footer-back:hover {
+  color: var(--accent);
+}
