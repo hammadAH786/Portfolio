@@ -1,27 +1,37 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import LiquidBackground from "./components/LiquidBackground";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Footer from "./components/FooterSection";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Skills from "./pages/Skills";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
 
 export default function App() {
   return (
-    <>
+    <BrowserRouter>
       <LiquidBackground />
+
       <Navbar />
+
       <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<Home />} />
+
+          <Route path="/about" element={<About />} />
+
+          <Route path="/skills" element={<Skills />} />
+
+          <Route path="/projects" element={<Projects />} />
+
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </main>
+
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
